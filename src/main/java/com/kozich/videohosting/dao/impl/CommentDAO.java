@@ -2,7 +2,7 @@ package com.kozich.videohosting.dao.impl;
 
 import com.kozich.videohosting.connectionpool.ProxyConnection;
 import com.kozich.videohosting.connectionpool.impl.ConnectionPoolImpl;
-import com.kozich.videohosting.dao.DefaultDao;
+import com.kozich.videohosting.dao.DefaultDAO;
 import com.kozich.videohosting.entity.impl.CommentEntity;
 import com.kozich.videohosting.exception.DBException;
 
@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class CommentDao implements DefaultDao<CommentEntity> {
+public class CommentDAO implements DefaultDAO<CommentEntity> {
     private static ConnectionPoolImpl connectionPool;
 
     static {

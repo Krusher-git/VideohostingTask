@@ -6,7 +6,7 @@ import com.kozich.videohosting.exception.DBException;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface DefaultDao<T extends DefaultEntity> {
+public interface DefaultDAO<T extends DefaultEntity> {
     boolean create(T entity) throws SQLException, DBException;
 
     boolean update(T entity) throws SQLException, DBException;
