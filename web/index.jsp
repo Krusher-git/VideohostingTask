@@ -14,6 +14,6 @@
 <video width="420"
        height="264"
        src="video/about eyes.mp4" controls></video>
-<img src="picture/rwUJnMaFF5E.jpg" alt="ssuka"/>
+<img src="picture/defaultProfilePicture.jpg" alt="ssuka"/>
 </body>
 </html>

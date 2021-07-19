@@ -1,7 +1,7 @@
 package com.kozich.videohosting.entity;
 
 
-public abstract class DefaultEntity {
+public abstract class AbstractEntity {
     protected int id;
 
 

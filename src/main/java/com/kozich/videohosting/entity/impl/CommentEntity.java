@@ -1,14 +1,13 @@
 package com.kozich.videohosting.entity.impl;
 
-import com.kozich.videohosting.entity.DefaultEntity;
+import com.kozich.videohosting.entity.AbstractEntity;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CommentEntity extends DefaultEntity {
-    private String userLogin;
+public class CommentEntity extends AbstractEntity {
     private int userId;
-    //TODO: Check this out
+    private String userLogin;
     private int videoId;
     private String text;
     private String srcPic;
@@ -21,12 +20,10 @@ public class CommentEntity extends DefaultEntity {
         this.srcPic = resultSet.getString(5);
     }
 
-    public CommentEntity(int userId, int videoId, String text, String srcPic) {
-        this.id = 0;
+    public CommentEntity(int userId, int videoId, String text) {
         this.userId = userId;
         this.videoId = videoId;
         this.text = text;
-        this.srcPic = srcPic;
     }
 
     public String getSrcPic() {
@@ -49,5 +46,23 @@ public class CommentEntity extends DefaultEntity {
         return text;
     }
 
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
+    public void setUserLogin(String userLogin) {
+        this.userLogin = userLogin;
+    }
+
+    public void setVideoId(int videoId) {
+        this.videoId = videoId;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setSrcPic(String srcPic) {
+        this.srcPic = srcPic;
+    }
 }

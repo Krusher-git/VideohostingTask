@@ -3,7 +3,7 @@ package com.kozich.videohosting.connectionpool.impl;
 import com.kozich.videohosting.connectionpool.ConnectionPool;
 import com.kozich.videohosting.connectionpool.MySQLConnector;
 import com.kozich.videohosting.connectionpool.ProxyConnection;
-import com.kozich.videohosting.exception.DBException;
+import com.kozich.videohosting.exception.DAOException;
 
 import java.sql.SQLException;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -45,11 +45,11 @@ public class ConnectionPoolImpl implements ConnectionPool {
     }
 
     @Override
-    public void closeConnection(ProxyConnection connection) throws DBException {
+    public void closeConnection(ProxyConnection connection) throws DAOException {
         if (connection == null) {
             //TODO: logger
 
-            throw new DBException();
+            throw new DAOException();
         }
         /*TODO: need to fix this part.
 
